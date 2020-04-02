@@ -1,13 +1,6 @@
-- name: Fall 2011
+- name: Fall 2019
   courses:
-    - name: CS 1 Introduction to programming with FORTRAN
-      desc: '(in progress)'
-    - name: Math 101 Calculus 1
-      desc: '(in progress)'
-    - name: Anth 33 Techniques in Excavation and Archaeological Discovery
-      desc: '(in progress)'
-    - name: Chin 102 Introductory Chinese
-      desc: '(in progress)'
-    - name: Mus 28 Class Piano
-      desc: '(in progress)'
-
+    - name: CS106X Programming Abstractions (Accelerated)
+      desc: "TBD"
+    - name: ESF10 Education as Self-Fashioning - Unintended Consequences
+      desc: "TBD"
