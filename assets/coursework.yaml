@@ -1,6 +1,51 @@
+- name: Spring 2020 (Current)
+  courses:
+    - name: CS107 Computer Organization and Systems
+      desc: In Progress.
+    - name: CS221 Artificial Intelligence - Principles and Techniques"
+      desc: In Progress.
+    - name: CS 230 Deep Learning
+      desc: In Progress.
+    - name: Econ1v Principles of Economics
+      desc: In Progress.
+    - name: Math108 Introduction to Combinatorics and Its Applications
+      desc: In Progress.
+
+- name: Winter 2020
+  courses:
+    - name: CS103 Mathematical Foundations of Computing
+      desc: TBD.
+    - name: CS109 Introduction to Probability for Computer Scientists
+      desc: TBD.
+    - name: Linear Algebra, Multivariable Calculus, and Modern Applications
+      desc: TBD.
+    - name: CS199 AI for Healthcare Bootcamp
+      desc: TBD.
+
 - name: Fall 2019
   courses:
     - name: CS106X Programming Abstractions (Accelerated)
-      desc: "TBD"
+      desc: "I was debating about CS106B/X/107 for a while before taking the class and I'm sure
+      I made the right choice because I absolutely loved the class! Jerry is a fantastic 
+      lecturer, the assignments were fun and the final project ensured that I was able to 
+      finish a graph algorithm project I'd put on hold after summer. Bonus: there were a bunch 
+      of optional coding problems where you can get a free dinner with Jerry! 10/10"
     - name: ESF10 Education as Self-Fashioning - Unintended Consequences
-      desc: "TBD"
+      desc: "ESF is definitely the best way to complete your freshman writing requirements.
+      I choose a STEM oriented ESF because I haven't had much literature/
+      writing exposure in high school and it worked out. Prof. Gerritsen is really fun and 
+      knowledgeable and brought in guest speakers on various subjects around our class theme. 
+      The class was not as intensive as I expected, only ramping in the last few weeks with the 
+      final paper. 8/10"
+    - name: CS106L Standard C++ Programming Laboratory
+      desc: "Pretty informative. It brings out a lot of the new features of C++ 
+      that CS106B/X would skip. Good supplement to CS106B/X, but also worth taking if you need 
+      to write C++ code in industry. 6/10"
+    - name: CS522 Seminar in Artificial Intelligence in Healthcare
+      desc: "The class brought in big names (Vinod Khosla) doing interesting work which made 
+      some seminars worthwhile. Overall, the seminars lacked technical depth, making them most 
+      effective for those who want to know if healthcare is interesting. 7/10"
+    - name: Stats48N Riding the Data Wave
+      desc: "This was a writing-heavy intro to stats class. The lectures were interesting, building 
+      up from distributions through to PCA. The weekly two-page homework required a written statistical 
+      analysis and turned out to be the biggest negative of the class. 3/10"
