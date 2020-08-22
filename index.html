@@ -14,11 +14,11 @@
         
         <div class="navbutton" data-trigger-content="about">about</div>
         
-        <div class="navbutton" data-trigger-content="projects">projects</div>
-        
         <div class="navbutton" data-trigger-content="coursework">coursework</div>
         
         <div class="navbutton" data-trigger-content="stuff">stuff</div>
+        
+        <div class="navbutton" data-trigger-content="projects">projects</div>
         
     </div>
     <hr>
@@ -40,7 +40,6 @@ Outside my coursework, I'm currently working on scaling this healthcare solution
 <p>If you want to know more about other projects I've worked on, check out my
 <a href="https://www.linkedin.com/in/visweshk/">Linkedin</a>,
 and <a href="https://www.github.com/visweshk">Github</a>!</p>
-<p>I'm in the process of adding more stuff to this website. Stay tuned!</p>
 
 <style>
 	#about ul {
@@ -58,115 +57,47 @@ and <a href="https://www.github.com/visweshk">Github</a>!</p>
             
                 
             
-            <div class="contentItem hiddenItem" id="projects">
-
-                Some of the current and past projects and research I've been involved with
-(click to reveal). (Sorry, this is still pending. I hope to update it soon!)
-
-
-
-
-<h4>Pet projects and misc.</h4>
-
-<ul>
-
-</ul>
-
-<script>
-    for (var elem of document.getElementsByClassName('projectName')) {
-            elem.addEventListener('click', toggleDescription);
-        }
-</script>
-
-<style>
-    #projects ul {
-        margin-bottom: 8pt;
-        margin-top: 4pt;
-    }
-
-    #projects ul > li {
-        margin-bottom: 2pt;
-    }
-
-    div.group {
-        margin-top: 20pt;
-        margin-bottom: 8pt;
-    }
-    
-    div.group > div {
-        margin-top: 4pt;
-        margin-bottom: 12pt;
-    }
-   
-    div.project {
-        margin-top: 10pt;
-        margin-bottom: 8pt;
-    }
-    
-    div.project > div {
-        margin-top: 4pt;
-        margin-bottom: 12pt;
-    }
-
-    div.link {
-        margin-top: 5pt;
-        margin-bottom: 10pt;
-    }
-
-    span.groupName {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    span.projectName {
-        text-decoration: underline;
-    }
-
-    span.projectName:hover {
-        cursor: pointer;
-    }
-
-    span.projectName:active {
-        color: #000000;
-    }
-</style>
-
-            </div>
-            
-            
-                
-            
             <div class="contentItem hiddenItem" id="coursework">
 
                 A list of the subjects I've taken at Stanford, with my thoughts about them (click to view).
 
 
     <div class="semester">
-    <h4>Spring 2020 (Current)</h4>
+    <h4>Summer 2020</h4>
+    
+        <div class="subject">
+            <span class="subjectName">CS161 Design and Analysis of Algorithms</span>
+            <div class="hiddenItem">This class was not too challenging, you can take it before 103 if you have even any proof-writing experience.</div>
+        </div>
+    
+    </div>
+
+    <div class="semester">
+    <h4>Spring 2020</h4>
     
         <div class="subject">
             <span class="subjectName">CS107 Computer Organization and Systems</span>
-            <div class="hiddenItem">In Progress.</div>
+            <div class="hiddenItem">This class is one I'll remember for years simply because of the infamous Binary Bomb assignment - definitely the most challenging. Be forewarned: the 5th level does not reveal its secrets to all.</div>
         </div>
     
         <div class="subject">
             <span class="subjectName">CS221 Artificial Intelligence - Principles and Techniques</span>
-            <div class="hiddenItem">In Progress.</div>
+            <div class="hiddenItem">Pretty interesting. Works well as a quick overview of AI but the assignments don't work often with building models themselves from scratch which I would have found more interesting.</div>
         </div>
     
         <div class="subject">
             <span class="subjectName">Engr40M Intro to Making - What is EE</span>
-            <div class="hiddenItem">In Progress.</div>
+            <div class="hiddenItem">Did not enjoyed this class too much, probably because this version did not include the practical component due to COVID-19.</div>
         </div>
     
         <div class="subject">
             <span class="subjectName">Econ1v Principles of Economics</span>
-            <div class="hiddenItem">In Progress.</div>
+            <div class="hiddenItem">Good first introduction to economics. I found the macroeconomics section lacking in clarity when compared to micro, though that might simply be due to the nature of the subfields themselves.</div>
         </div>
     
         <div class="subject">
             <span class="subjectName">Math108 Introduction to Combinatorics and Its Applications</span>
-            <div class="hiddenItem">In Progress.</div>
+            <div class="hiddenItem">Super interesting! Highly recommend it.</div>
         </div>
     
         <div class="subject">
@@ -282,16 +213,15 @@ and <a href="https://www.github.com/visweshk">Github</a>!</p>
             
             <div class="contentItem hiddenItem" id="stuff">
 
-                <p>Stuff I find interesting.</p>
-<h4>Stimulating Reads</h4>
+                <p>A collection of links I find particularly interesting.</p>
+<h4>Blogs</h4>
 <ul>
-<li><a href="http://paulgraham.com/articles.html">Paul Graham's essays</a> (programmer, writer, investor, cofounder of Y Combinator).</li>
-<li><a href="http://slatestarcodex.com/">Slate Star Codex</a>, a blog by Scott Alexander.</li>
-<li><a href="https://www.lesswrong.com/">LessWrong</a>, 'the' rationality blog+forum.</li>
-<li><a href="https://gwern.net">Gwern</a>, a blog by Gwern Branwen.</li>
-<li><a href="https://marginalrevolution.com/">Marginal Revolution</a> a newsletter/blog by Tyler Cowen and Alex Tabarrok.</li>
-<li><a href="https://fs.blog">Farnam Street</a>, a blog that helps you go to bed smarter than you woke up. It speaks of philosophy, wisdom, happiness, knowledge and meaning.</li>
-<li><a href="https://www.valueplays.net/wp-content/uploads/The-Best-of-Charlie-Munger-1994-2011.pdf">Essays and Speeches by Charlie Munger</a>: the long time friend and advisor to Warren Buffet speaks and writes of economics, finance, psychology, and overall worldly wisdom. </li>
+<li><a href="http://paulgraham.com/articles.html">Paul Graham's essays</a> - Required reading (of sorts) for people interested in starting companies.</li>
+<li><a href="http://slatestarcodex.com/">Slate Star Codex</a> - A (currently dead) blog by Scott Alexander.</li>
+<li><a href="https://www.lesswrong.com/">LessWrong</a> - 'The' rationality blog.</li>
+<li><a href="https://gwern.net">Gwern</a></li>
+<li><a href="https://marginalrevolution.com/">Marginal Revolution</a> - Econ blog by Tyler Cowen and Alex Tabarrok.</li>
+<li><a href="https://fs.blog">Farnam Street</a> - On mental models.</li>
 </ul>
 <h4>Links</h4>
 <p>Links pages are underrated. Not many people use them. Here's a few who do.</p>
@@ -304,10 +234,88 @@ and <a href="https://www.github.com/visweshk">Github</a>!</p>
 
             </div>
             
+            
+                
+            
+            <div class="contentItem hiddenItem" id="projects">
+
+                Some of the current and past projects and research I've been involved with
+(click to reveal). (Sorry, this is still pending. I hope to update it soon!)
+
+
+
+
+<h4>Pet projects and misc.</h4>
+
+<ul>
+
+</ul>
+
+<script>
+    for (var elem of document.getElementsByClassName('projectName')) {
+            elem.addEventListener('click', toggleDescription);
+        }
+</script>
+
+<style>
+    #projects ul {
+        margin-bottom: 8pt;
+        margin-top: 4pt;
+    }
+
+    #projects ul > li {
+        margin-bottom: 2pt;
+    }
+
+    div.group {
+        margin-top: 20pt;
+        margin-bottom: 8pt;
+    }
+    
+    div.group > div {
+        margin-top: 4pt;
+        margin-bottom: 12pt;
+    }
+   
+    div.project {
+        margin-top: 10pt;
+        margin-bottom: 8pt;
+    }
+    
+    div.project > div {
+        margin-top: 4pt;
+        margin-bottom: 12pt;
+    }
+
+    div.link {
+        margin-top: 5pt;
+        margin-bottom: 10pt;
+    }
+
+    span.groupName {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    span.projectName {
+        text-decoration: underline;
+    }
+
+    span.projectName:hover {
+        cursor: pointer;
+    }
+
+    span.projectName:active {
+        color: #000000;
+    }
+</style>
+
+            </div>
+            
     </div>
 
     <div id="footer">
-        <div>last updated 2020-06-07</div>
+        <div>last updated 2020-08-22</div>
         <div>
             
                 <a href=https://kanna.ai target="_blank">
