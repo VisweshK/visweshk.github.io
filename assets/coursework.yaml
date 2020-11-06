@@ -1,3 +1,16 @@
+- name: Fall 2021
+  courses:
+    - name: CS110 Principles of Computer Systems
+      desc: "In Progress"
+    - name: CS230 Deep Learning
+      desc: "In Progress"
+    - name: CS154 Introduction to Theory of Computation
+      desc: "In Progress"
+    - name: CompLit37Q Zionism and the Novel
+      desc: "In Progress"
+    - name: Math120 Groups and Rings
+      desc: "In Progress"
+
 - name: Summer 2020
   courses:
     - name: CS161 Design and Analysis of Algorithms

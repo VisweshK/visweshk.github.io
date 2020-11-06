@@ -18,8 +18,6 @@
         
         <div class="navbutton" data-trigger-content="stuff">stuff</div>
         
-        <div class="navbutton" data-trigger-content="projects">projects</div>
-        
     </div>
     <hr>
     <div id="content">
@@ -31,15 +29,16 @@
 
                 <p><img src="media/profile.jpg" alt="profile picture" id="propic">
 Welcome to my homepage! I'm Viswesh, a Stanford '23 undergrad from Bangalore, India. I'm interested
-in computer science, math and biology and I'm passionate about building cool things that can make an impact at scale.</p>
-<p>At Stanford, I'm majoring in Computer Science, potentially specializing in Artificial Intelligence, Biocomputation or Systems.
-There's a noncomprehensive list of courses I've taken under the 'coursework' tab.</p>
+in computer science, math and healthcare and I'm passionate about building cool things that can make an impact at scale.</p>
+<p>At Stanford, I'm majoring in Computer Science, focusing on Artificial Intelligence, and Systems (checkout the coursework tab).
+I'm a part of the <a href="https://stanfordmlgroup.github.io/programs/aihc-bootcamp/">AI for Healthcare Bootcamp</a> in the 
+<a href="https://stanfordmlgroup.github.io/">Stanford ML Group</a> where I've been working with on using AI
+to digitize pathology data (<a href="https://arxiv.org/abs/2010.15269">GloFlow</a>).</p>
 <p>Over the past year I've been developing <a href="https://kanna.ai">Kanna</a> - a patented, clinically validated system that can
-detect eye diseases in children using just a mobilephone.
-Outside my coursework, I'm currently working on scaling this healthcare solution for use in hospitals in India.</p>
-<p>If you want to know more about other projects I've worked on, check out my
-<a href="https://www.linkedin.com/in/visweshk/">Linkedin</a>,
-and <a href="https://www.github.com/visweshk">Github</a>!</p>
+detect eye diseases in children using just a mobilephone - with my brother <a href="https://vrishabkrishna.com">Vrishab Krishna</a>.
+We're looking to partner with healthcare providers to take this technology to the masses!</p>
+<p>My CV and other projects are scattered over <a href="https://www.linkedin.com/in/visweshk/">Linkedin</a>, 
+<a href="https://www.github.com/visweshk">Github</a> and <a href="https://scholar.google.com/citations?user=y4wJRpQAAAAJ&amp;hl=en">Scholar</a>.</p>
 
 <style>
 	#about ul {
@@ -59,8 +58,38 @@ and <a href="https://www.github.com/visweshk">Github</a>!</p>
             
             <div class="contentItem hiddenItem" id="coursework">
 
-                A list of the subjects I've taken at Stanford, with my thoughts about them (click to view).
+                A comprehensive list of the courses I've taken at Stanford, with my retrospective thoughts (click to expand).
 
+
+    <div class="semester">
+    <h4>Fall 2021</h4>
+    
+        <div class="subject">
+            <span class="subjectName">CS110 Principles of Computer Systems</span>
+            <div class="hiddenItem">In Progress</div>
+        </div>
+    
+        <div class="subject">
+            <span class="subjectName">CS230 Deep Learning</span>
+            <div class="hiddenItem">In Progress</div>
+        </div>
+    
+        <div class="subject">
+            <span class="subjectName">CS154 Introduction to Theory of Computation</span>
+            <div class="hiddenItem">In Progress</div>
+        </div>
+    
+        <div class="subject">
+            <span class="subjectName">CompLit37Q Zionism and the Novel</span>
+            <div class="hiddenItem">In Progress</div>
+        </div>
+    
+        <div class="subject">
+            <span class="subjectName">Math120 Groups and Rings</span>
+            <div class="hiddenItem">In Progress</div>
+        </div>
+    
+    </div>
 
     <div class="semester">
     <h4>Summer 2020</h4>
@@ -218,104 +247,18 @@ and <a href="https://www.github.com/visweshk">Github</a>!</p>
 <ul>
 <li><a href="http://paulgraham.com/articles.html">Paul Graham's essays</a> - Required reading (of sorts) for people interested in starting companies.</li>
 <li><a href="http://slatestarcodex.com/">Slate Star Codex</a> - A (currently dead) blog by Scott Alexander.</li>
-<li><a href="https://www.lesswrong.com/">LessWrong</a> - 'The' rationality blog.</li>
+<li><a href="https://www.lesswrong.com/">LessWrong</a> - 'The' rationality forum.</li>
 <li><a href="https://gwern.net">Gwern</a></li>
 <li><a href="https://marginalrevolution.com/">Marginal Revolution</a> - Econ blog by Tyler Cowen and Alex Tabarrok.</li>
 <li><a href="https://fs.blog">Farnam Street</a> - On mental models.</li>
 </ul>
-<h4>Links</h4>
-<p>Links pages are underrated. Not many people use them. Here's a few who do.</p>
-<ul>
-<li><a href="http://slatestarcodex.com/tag/links-2/">Scott Alexander</a></li>
-<li><a href="https://guzey.com/knowledge/links/">Alexey Guzey</a></li>
-<li><a href="https://www.gwern.net/tags/newsletter">Gwern</a></li>
-<li><a href="https://marginalrevolution.com/?s=assorted+links">Marginal Revolution</a></li>
-</ul>
-
-            </div>
-            
-            
-                
-            
-            <div class="contentItem hiddenItem" id="projects">
-
-                Some of the current and past projects and research I've been involved with
-(click to reveal). (Sorry, this is still pending. I hope to update it soon!)
-
-
-
-
-<h4>Pet projects and misc.</h4>
-
-<ul>
-
-</ul>
-
-<script>
-    for (var elem of document.getElementsByClassName('projectName')) {
-            elem.addEventListener('click', toggleDescription);
-        }
-</script>
-
-<style>
-    #projects ul {
-        margin-bottom: 8pt;
-        margin-top: 4pt;
-    }
-
-    #projects ul > li {
-        margin-bottom: 2pt;
-    }
-
-    div.group {
-        margin-top: 20pt;
-        margin-bottom: 8pt;
-    }
-    
-    div.group > div {
-        margin-top: 4pt;
-        margin-bottom: 12pt;
-    }
-   
-    div.project {
-        margin-top: 10pt;
-        margin-bottom: 8pt;
-    }
-    
-    div.project > div {
-        margin-top: 4pt;
-        margin-bottom: 12pt;
-    }
-
-    div.link {
-        margin-top: 5pt;
-        margin-bottom: 10pt;
-    }
-
-    span.groupName {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    span.projectName {
-        text-decoration: underline;
-    }
-
-    span.projectName:hover {
-        cursor: pointer;
-    }
-
-    span.projectName:active {
-        color: #000000;
-    }
-</style>
 
             </div>
             
     </div>
 
     <div id="footer">
-        <div>last updated 2020-08-22</div>
+        <div>last updated 2020-11-06</div>
         <div>
             
                 <a href=https://kanna.ai target="_blank">
