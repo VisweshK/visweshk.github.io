@@ -1,283 +1,267 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Viswesh Krishna</title>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="/media/favicon.ico">
-    <link rel="stylesheet" href="src/style.css">
-    <script src="src/script.js"></script>
+    <title>Sacred Space</title>
+    <link rel="icon" href="data:,">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            background: #f5f3ed;
+            color: #2a2a2a;
+            min-height: 100vh;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            overflow: hidden;
+        }
+
+        /* Vastu Purusha Mandala - 3x3 Grid */
+        .vastu-mandala {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            width: 95vw;
+            height: 95vh;
+            max-width: 1800px;
+            max-height: 1200px;
+            gap: 1px;
+            background: rgba(160, 150, 135, 0.12);
+            padding: 1px;
+        }
+
+        .vastu-cell {
+            background: #f5f3ed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        /* Directional Elements with traditional Vastu colors - more prominent */
+        
+        /* North (Kubera - wealth, water element) */
+        .north {
+            grid-column: 2;
+            grid-row: 1;
+            background: linear-gradient(180deg, rgba(200, 225, 245, 0.5), #f5f3ed);
+        }
+
+        /* Northeast - ISHANYA (Shiva, most auspicious, water element) */
+        .northeast {
+            grid-column: 3;
+            grid-row: 1;
+            background: linear-gradient(135deg, rgba(190, 220, 245, 0.65), rgba(230, 240, 245, 0.4));
+        }
+
+        /* East (Indra - prestige, sun) */
+        .east {
+            grid-column: 3;
+            grid-row: 2;
+            background: linear-gradient(270deg, rgba(255, 245, 215, 0.55), #f5f3ed);
+        }
+
+        /* Southeast - AGNI (fire element) */
+        .southeast {
+            grid-column: 3;
+            grid-row: 3;
+            background: linear-gradient(225deg, rgba(240, 190, 160, 0.6), rgba(245, 210, 190, 0.4));
+        }
+
+        /* South (Yama - dharma, strength) */
+        .south {
+            grid-column: 2;
+            grid-row: 3;
+            background: linear-gradient(0deg, rgba(225, 200, 185, 0.55), #f5f3ed);
+        }
+
+        /* Southwest - NAIRUTYA (earth element, stability, heaviest) */
+        .southwest {
+            grid-column: 1;
+            grid-row: 3;
+            background: linear-gradient(315deg, rgba(205, 180, 145, 0.7), rgba(220, 200, 170, 0.5));
+        }
+
+        /* West (Varuna - water, setting sun) */
+        .west {
+            grid-column: 1;
+            grid-row: 2;
+            background: linear-gradient(90deg, rgba(200, 215, 230, 0.5), #f5f3ed);
+        }
+
+        /* Northwest - VAYAVYA (air element, movement) */
+        .northwest {
+            grid-column: 1;
+            grid-row: 1;
+            background: linear-gradient(45deg, rgba(215, 225, 235, 0.5), #f5f3ed);
+        }
+
+        /* CENTER - BRAHMASTHANA (Brahma, space element - most sacred) */
+        .brahmasthana {
+            grid-column: 2;
+            grid-row: 2;
+            background: radial-gradient(circle, rgba(255, 248, 230, 0.75), rgba(245, 235, 210, 0.6), rgba(245, 240, 225, 0.85));
+        }
+
+        /* Name styling - placed in Ishanya (northeast), right-aligned - gross form emerging from subtle source */
+        .name {
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            color: #1a1a1a;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+        }
+
+        /* Mission statement - in Brahmasthana (center) */
+        .mission {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            line-height: 1.8;
+            color: #3a3a3a;
+            text-align: center;
+            max-width: 100%;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        /* Subtle, non-distracting link styling */
+        a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(42, 42, 42, 0.2);
+            transition: border-bottom-color 0.3s ease;
+        }
+
+        a:hover {
+            border-bottom-color: rgba(42, 42, 42, 0.5);
+        }
+
+        a:visited {
+            color: inherit;
+        }
+
+        /* Subtle element markers (barely visible sacred symbols) */
+        .element-marker {
+            position: absolute;
+            font-size: 0.65rem;
+            opacity: 0.08;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .northeast .element-marker {
+            top: 0.5rem;
+            right: 0.5rem;
+            color: #4a7c8f;
+        }
+
+        .southeast .element-marker {
+            bottom: 0.5rem;
+            right: 0.5rem;
+            color: #c85a3e;
+        }
+
+        .southwest .element-marker {
+            bottom: 0.5rem;
+            left: 0.5rem;
+            color: #8b7355;
+        }
+
+        .northwest .element-marker {
+            top: 0.5rem;
+            left: 0.5rem;
+            color: #7a9fad;
+        }
+
+        .brahmasthana .element-marker {
+            bottom: 0.5rem;
+            opacity: 0.05;
+            color: #9a9a9a;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .vastu-mandala {
+                gap: 0.5px;
+            }
+            
+            .vastu-cell {
+                padding: 1rem;
+            }
+
+            .name {
+                font-size: 0.85rem;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .mission {
+                font-size: 0.95rem;
+            }
+
+            .element-marker {
+                font-size: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h2 id="header">Viswesh Krishna</h2>
-    <div id="navbar">
-        
-        <div class="navbutton" data-trigger-content="about">about</div>
-        
-        <div class="navbutton" data-trigger-content="coursework">coursework</div>
-        
-        <div class="navbutton" data-trigger-content="stuff">stuff</div>
-        
-    </div>
-    <hr>
-    <div id="content">
-        
-            
-                
-            
-            <div class="contentItem " id="about">
-
-                <p><img src="media/profile.jpg" alt="profile picture" id="propic">
-Welcome to my homepage! I'm Viswesh, a Stanford '23 undergrad from Bangalore, India. I'm interested
-in computer science, math and healthcare and I'm passionate about building cool things that can make an impact at scale.</p>
-<p>At Stanford, I'm majoring in Computer Science, focusing on Artificial Intelligence, and Systems (checkout the coursework tab).
-I'm a part of the <a href="https://stanfordmlgroup.github.io/programs/aihc-bootcamp/">AI for Healthcare Bootcamp</a> in the 
-<a href="https://stanfordmlgroup.github.io/">Stanford ML Group</a> where I've been working with on using AI
-to digitize pathology data (<a href="https://arxiv.org/abs/2010.15269">GloFlow</a>).</p>
-<p>Over the past year I've been developing <a href="https://kanna.ai">Kanna</a> - a patented, clinically validated system that can
-detect eye diseases in children using just a mobilephone - with my brother <a href="https://vrishabkrishna.com">Vrishab Krishna</a>.
-We're looking to partner with healthcare providers to take this technology to the masses!</p>
-<p>My CV and other projects are scattered over <a href="https://www.linkedin.com/in/visweshk/">Linkedin</a>, 
-<a href="https://www.github.com/visweshk">Github</a> and <a href="https://scholar.google.com/citations?user=y4wJRpQAAAAJ&amp;hl=en">Scholar</a>.</p>
-
-<style>
-	#about ul {
-		margin-top: -2pt;
-	}
-
-	#about ul>li {
-		margin-bottom: 1pt;
-	}
-
-</style>
-
-            </div>
-            
-            
-                
-            
-            <div class="contentItem hiddenItem" id="coursework">
-
-                A comprehensive list of the courses I've taken at Stanford, with my retrospective thoughts (click to expand).
-
-
-    <div class="semester">
-    <h4>Fall 2021</h4>
-    
-        <div class="subject">
-            <span class="subjectName">CS110 Principles of Computer Systems</span>
-            <div class="hiddenItem">In Progress</div>
+    <div class="vastu-mandala">
+        <!-- Northwest - Vayavya (Air) -->
+        <div class="vastu-cell northwest">
+            <span class="element-marker">vāyu</span>
         </div>
-    
-        <div class="subject">
-            <span class="subjectName">CS230 Deep Learning</span>
-            <div class="hiddenItem">In Progress</div>
-        </div>
-    
-        <div class="subject">
-            <span class="subjectName">CS154 Introduction to Theory of Computation</span>
-            <div class="hiddenItem">In Progress</div>
-        </div>
-    
-        <div class="subject">
-            <span class="subjectName">CompLit37Q Zionism and the Novel</span>
-            <div class="hiddenItem">In Progress</div>
-        </div>
-    
-        <div class="subject">
-            <span class="subjectName">Math120 Groups and Rings</span>
-            <div class="hiddenItem">In Progress</div>
-        </div>
-    
-    </div>
 
-    <div class="semester">
-    <h4>Summer 2020</h4>
-    
-        <div class="subject">
-            <span class="subjectName">CS161 Design and Analysis of Algorithms</span>
-            <div class="hiddenItem">This class was not too challenging, you can take it before 103 if you have even any proof-writing experience.</div>
+        <!-- North - Kubera -->
+        <div class="vastu-cell north">
         </div>
-    
-    </div>
 
-    <div class="semester">
-    <h4>Spring 2020</h4>
-    
-        <div class="subject">
-            <span class="subjectName">CS107 Computer Organization and Systems</span>
-            <div class="hiddenItem">This class is one I'll remember for years simply because of the infamous Binary Bomb assignment - definitely the most challenging. Be forewarned: the 5th level does not reveal its secrets to all.</div>
+        <!-- Northeast - Ishanya (Water, most auspicious) -->
+        <div class="vastu-cell northeast">
+            <div class="name">Viswesh Krishna</div>
+            <span class="element-marker">jala</span>
         </div>
-    
-        <div class="subject">
-            <span class="subjectName">CS221 Artificial Intelligence - Principles and Techniques</span>
-            <div class="hiddenItem">Pretty interesting. Works well as a quick overview of AI but the assignments don't work often with building models themselves from scratch which I would have found more interesting.</div>
+
+        <!-- West - Varuna -->
+        <div class="vastu-cell west">
         </div>
-    
-        <div class="subject">
-            <span class="subjectName">Engr40M Intro to Making - What is EE</span>
-            <div class="hiddenItem">Did not enjoyed this class too much, probably because this version did not include the practical component due to COVID-19.</div>
+
+        <!-- CENTER - Brahmasthana (Space/Akasha) -->
+        <div class="vastu-cell brahmasthana">
+		<div class="mission">Solving cancer @ <a href="https://valarlabs.com">Valar</a></div>
+            <span class="element-marker">ākāśa</span>
         </div>
-    
-        <div class="subject">
-            <span class="subjectName">Econ1v Principles of Economics</span>
-            <div class="hiddenItem">Good first introduction to economics. I found the macroeconomics section lacking in clarity when compared to micro, though that might simply be due to the nature of the subfields themselves.</div>
+
+        <!-- East - Indra -->
+        <div class="vastu-cell east">
         </div>
-    
-        <div class="subject">
-            <span class="subjectName">Math108 Introduction to Combinatorics and Its Applications</span>
-            <div class="hiddenItem">Super interesting! Highly recommend it.</div>
+
+        <!-- Southwest - Nairutya (Earth) -->
+        <div class="vastu-cell southwest">
+            <span class="element-marker">pṛthvī</span>
         </div>
-    
-        <div class="subject">
-            <span class="subjectName">CS195 AI for Healthcare Bootcamp (Continued)</span>
-            <div class="hiddenItem">The second quarter tends to be much more project focused. I also learnt from the CS Advisor that (apparently) CS199 does not count if taken during freshman year, so sign up for CS195.</div>
+
+        <!-- South - Yama -->
+        <div class="vastu-cell south">
         </div>
-    
-    </div>
 
-    <div class="semester">
-    <h4>Winter 2020</h4>
-    
-        <div class="subject">
-            <span class="subjectName">CS199 AI for Healthcare Bootcamp</span>
-            <div class="hiddenItem">By far the most fun class of the quarter. This class fit really well with my current interests. Weekly paper reading and skill building sections were extremely educational. Interestingly, most selected for the bootcamp tend to be seniors/masters students studying AI.</div>
-        </div>
-    
-        <div class="subject">
-            <span class="subjectName">CS103 Mathematical Foundations of Computing</span>
-            <div class="hiddenItem">The interesting material in this class is once again spaced over the last few weeks with Automata, CFGs and Turing Machines. If you have a background in proof based math, take CS154 instead. The TAs are super helpful in office hours but they tend to be extremely nitpicky while grading psets. Dr. Lee's lectures and slides tended to get drawn out at times.</div>
-        </div>
-    
-        <div class="subject">
-            <span class="subjectName">CS109 Introduction to Probability for Computer Scientists</span>
-            <div class="hiddenItem">The material in this class was super interesting over the last few weeks as we entered machine learning. Most of the grade from the class came from the psets, which are not graded 'strictly' by the TAs.</div>
-        </div>
-    
-        <div class="subject">
-            <span class="subjectName">Math51 Linear Algebra, Multivariable Calc., and Modern Applications</span>
-            <div class="hiddenItem">I found this class quite slow, only reaching more advanced topics only at the end of the quarter. The textbook for the class is comprehensive and contains a healthy dose of application of the concepts covered. Overall, I wished I had taken the Advanced math series.</div>
-        </div>
-    
-    </div>
-
-    <div class="semester">
-    <h4>Fall 2019</h4>
-    
-        <div class="subject">
-            <span class="subjectName">CS106X Programming Abstractions (Accelerated)</span>
-            <div class="hiddenItem">I was debating about CS106B/X/107 for a while before taking the class and I'm sure I made the right choice because I absolutely loved the class! Jerry is a fantastic lecturer, the assignments were fun and the final project ensured that I was able to finish a graph algorithm project I'd put on hold after summer. Bonus: there were a bunch of optional coding problems where you can get a free dinner with Jerry!</div>
-        </div>
-    
-        <div class="subject">
-            <span class="subjectName">ESF10 Education as Self-Fashioning - Unintended Consequences</span>
-            <div class="hiddenItem">ESF is definitely the best way to complete your freshman writing requirements. I choose a STEM oriented ESF because I haven't had much literature/ writing exposure in high school and it worked out. Prof. Gerritsen is really fun and knowledgeable and brought in guest speakers on various subjects around our class theme. The class was not as intensive as I expected, only ramping in the last few weeks with the final paper.</div>
-        </div>
-    
-        <div class="subject">
-            <span class="subjectName">CS106L Standard C++ Programming Laboratory</span>
-            <div class="hiddenItem">Pretty informative. It brings out a lot of the new features of C++ that CS106B/X would skip. Good supplement to CS106B/X, but also worth taking if you need to write C++ code in industry.</div>
-        </div>
-    
-        <div class="subject">
-            <span class="subjectName">CS522 Seminar in Artificial Intelligence in Healthcare</span>
-            <div class="hiddenItem">The class brought in big names (Vinod Khosla) doing interesting work which made some seminars worthwhile. Overall, the seminars lacked technical depth, making them most effective for those who want to know if healthcare is interesting.</div>
-        </div>
-    
-        <div class="subject">
-            <span class="subjectName">Stats48N Riding the Data Wave</span>
-            <div class="hiddenItem">This was a writing-heavy intro to stats class. The lectures were interesting, building up from distributions through to PCA. The weekly two-page homework required a written statistical analysis and turned out to be the biggest negative of the class.</div>
-        </div>
-    
-    </div>
-
-
-<script>
-    for (var elem of document.getElementsByClassName('subjectName')) {
-            elem.addEventListener('click', toggleDescription);
-        }
-</script>
-
-<style>
-    #coursework ul {
-        margin-bottom: 8pt;
-        margin-top: 4pt;
-    }
-
-    #coursework ul > li {
-        margin-bottom: 2pt;
-    }
-
-    div.subject {
-        margin-bottom: 8pt;
-    }
-
-    div.subject > div {
-        margin-top: 4pt;
-        margin-bottom: 12pt;
-    }
-
-    span.subjectName {
-        text-decoration: underline;
-    }
-
-    span.subjectName:hover {
-        cursor: pointer;
-    }
-
-    span.subjectName:active {
-        color: #000000;
-    }
-
-    div.semester {
-        margin-bottom: 24pt;
-    }
-</style>
-
-
-            </div>
-            
-            
-                
-            
-            <div class="contentItem hiddenItem" id="stuff">
-
-                <p>A collection of links I find particularly interesting.</p>
-<h4>Blogs</h4>
-<ul>
-<li><a href="http://paulgraham.com/articles.html">Paul Graham's essays</a> - Required reading (of sorts) for people interested in starting companies.</li>
-<li><a href="http://slatestarcodex.com/">Slate Star Codex</a> - A (currently dead) blog by Scott Alexander.</li>
-<li><a href="https://www.lesswrong.com/">LessWrong</a> - 'The' rationality forum.</li>
-<li><a href="https://gwern.net">Gwern</a></li>
-<li><a href="https://marginalrevolution.com/">Marginal Revolution</a> - Econ blog by Tyler Cowen and Alex Tabarrok.</li>
-<li><a href="https://fs.blog">Farnam Street</a> - On mental models.</li>
-</ul>
-
-            </div>
-            
-    </div>
-
-    <div id="footer">
-        <div>last updated 2020-11-06</div>
-        <div>
-            
-                <a href=https://kanna.ai target="_blank">
-                  <img class="symbol" src="media/kanna.png" alt="Kanna">
-                </a>
-            
-                <a href=http://www.catb.org/hacker-emblem/ target="_blank">
-                  <img class="symbol" src="media/glider.svg" alt="hacker emblem">
-                </a>
-            
+        <!-- Southeast - Agni (Fire) -->
+        <div class="vastu-cell southeast">
+            <span class="element-marker">agni</span>
         </div>
     </div>
-    <link href="src/css.css" rel="stylesheet">
-
-    <script>
-        var links = document.getElementsByTagName('a');
-        for (var i=0, len=links.length; i < len; i ++) {
-              links[i].target = '_blank';
-        }
-    </script>
-
-</body></html>
+</body>
+</html>
